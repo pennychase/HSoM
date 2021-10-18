@@ -6,7 +6,7 @@ license-file:	License
 copyright:      Copyright (c) 2008-2015 Paul Hudak and Donya Quick
 category:       Sound
 stability:      experimental
-build-type:     Custom
+build-type:     Simple
 author:         Paul Hudak <paul.hudak@yale.edu>,
 				Donya Quick <donya.quick@yale.edu>,
                 Dan Winograd-Cort <daniel.winograd-cort@yale.edu>
@@ -49,7 +49,7 @@ Library
   other-modules:
   build-depends:
         base >= 3 && < 5, arrows >= 0.4, array, deepseq, random, 
-        HCodecs >= 0.2, Euterpea >= 2.0.3, 
+        HCodecs >= 0.2, Euterpea == 2.0.8, 
         containers, markov-chain, pure-fft, 
         UISF >= 0.4
   if (impl(ghc >= 6.10))
