@@ -2,13 +2,13 @@ name:           HSoM
 version:        1.0.0
 Cabal-Version:  >= 1.8
 license:        BSD3
-license-file:	License
+license-file:	  License
 copyright:      Copyright (c) 2008-2015 Paul Hudak and Donya Quick
 category:       Sound
 stability:      experimental
 build-type:     Simple
 author:         Paul Hudak <paul.hudak@yale.edu>,
-				Donya Quick <donya.quick@yale.edu>,
+				        Donya Quick <donya.quick@yale.edu>,
                 Dan Winograd-Cort <daniel.winograd-cort@yale.edu>
 maintainer:     Donya Quick <donyaquick@gmail.com>
 bug-reports:    https://github.com/Euterpea/Euterpea/issues
