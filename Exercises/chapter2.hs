@@ -1,6 +1,9 @@
 {-# LANGUAGE DeriveAnyClass #-}
 
+module Chapter2 where
+  
 import Data.List
+import qualified Data.Map as M
 
 import Euterpea
 
@@ -91,5 +94,29 @@ fromBlues (Prim (Rest d)) = Prim (Rest d)
 fromBlues (m1 :+: m2) = (fromBlues m1) :+: (fromBlues m2)
 fromBlues (m1 :=: m2) = (fromBlues m1) :=: (fromBlues m2)
 fromBlues (Modify ctl m) = Modify ctl (fromBlues m)
+
+-- Exercise 2.3
+
+intToPcMap :: M.Map Int [PitchClass]
+intToPcMap = M.fromListWith f $ zip (map pcToInt [Cff .. Bss]) (map (:[])[Cff .. Bss])
+  where f v1 v2 = v1 <> v2
+
+intToPc :: Int -> Maybe [PitchClass]
+intToPc i = M.lookup i intToPcMap
+
+-- absPitch (pitch ap) == ap
+-- (oct, n) = ap divMod 12
+-- pitch ap = (pitchClasses !! n, oct - 1)
+-- absPitch: 12*((oct - 1) +1) + pcToInt pc = 12*oct + n -- since pcToInt pc = n
+
+-- pitch (absPitch p) ~ p (up to enharmonics)
+-- p = (pc, oct)
+-- absPitch (pc, oct) = 12*(oct + 1) + pcToInt pc
+-- pitch $ 12*(oct + 1) + pcToInt pc = ( intToPc (pcToInt pc), (oct + 1) - 1)
+
+-- Exercise 2.4
+
+-- trans i (trans j p) = pitch (absPitch (pitch (absPitch p + j)) + i))
+ 
 
 
