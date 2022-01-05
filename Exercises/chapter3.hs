@@ -94,8 +94,6 @@ frereJacques = [ c 4 qn, d 4 qn, e 4 qn, c 4 qn, c 4 qn, d 4 qn, e 4 qn, c 4 qn
          , g 4 en, a 4 en, g 4 en, f 4 en, e 4 qn, c 4 qn, g 4 en, a 4 en, g 4 en, f 4 en, e 4 qn, c 4 qn,
           c 4 qn, g 3 qn, c 4 hn, c 4 qn, g 3 qn, c 4 hn]
 
-pachabel = [fs 4 hn, e 4 hn, d 4 hn, cs 4 hn, b 3 hn, a 3 hn, b 3 hn, cs 4 hn, d 5 hn, cs 5 hn, b 4 hn, a 4 hn
-            , g 4 hn, fs 4 hn, g 4 hn, a 4 hn, d 5 hn, cs 5 hn, b 4 hn, a 4 hn, g 4 hn, fs 4 hn, g 4 hn, a 4 hn ]
 
 mkRound :: Int -> [Music Pitch] -> [InstrumentName] -> Music Pitch
 mkRound reps melody voices =
